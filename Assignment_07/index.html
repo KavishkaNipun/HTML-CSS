@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Auto Image Slideshow</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <style>
+        html,body{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0px;
+        }
+        slider{
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: #1f1f1f;
+            overflow: hidden;
+            position: absolute;
+        }
+        slider > * {
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background:#1f1f1f;
+            animation: slide 12s infinite;
+            overflow: hidden;
+        }
+        slide:nth-child(1){
+            left: 0%;
+            animation-delay: -1s;
+            background-image: url("assets/img/6-3.jpg");
+            background-size:cover;
+            background-position: center;
+        }
+        slide:nth-child(2){
+            animation-delay: 2s;
+            background-image: url("assets/img/roadster-social.jpg");
+            background-size:cover;
+            background-position: center;
+        }
+        slide:nth-child(3){
+            animation-delay: 5s;
+            background-image: url("assets/img/2021-Mercedes-Benz-S-Class-011-1080.jpg");
+            background-size:cover;
+            background-position: center;
+        }
+        slide:nth-child(4){
+            left: 0%;
+            animation-delay: 8s;
+            background-image: url("assets/img/Gemera_exterior_7.jpg");
+            background-size:cover;
+            background-position: center;
+        }
+
+        @keyframes slide{
+            0%{
+                left: 100%;
+                width: 100%;
+            }
+            5%{
+                left: 0%;
+            }
+            25%{
+                left: 0%;
+            }
+            30%{
+                left: -100%;
+                width: 100%;
+            }
+            30.0001%{
+                left: -100%;
+                width: 0%;
+            }
+            100%{
+                left: 100%;
+                width: 0%;
+            }
+
+
+        }
+    </style>
+</head>
+<body>
+<slider>
+    <slide><p></p></slide>
+    <slide><p></p></slide>
+    <slide><p></p></slide>
+    <slide><p></p></slide>
+</slider>
+</body>
+</html>
